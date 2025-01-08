@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="border-t border-stroke bg-[#f8f7fc]">
         <div className="mx-auto">
           {/* <!-- Footer Top --> */}
-          <div className="py-20 lg:py-25">
+          <div className="mx-auto max-w-c-1280 xl:mt-15 xl:mb-15">
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0 md:px-8 px-4 2xl:px-0">
               <motion.div
                 variants={{
@@ -167,40 +167,48 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Quick Links
+                    User Links
                   </h4>
 
-                  <ul>
-                    <li>
+                  <ul className='text-sm'>
+                    <li className='text-[#627693]'>
                       <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        href="https://learnnex.in/about-us/"
+                        className="mb-3 inline-block hover:text-[#3b075f]"
                       >
-                        Home
+                        About Our Platform
                       </a>
                     </li>
-                    <li>
+                    <li className='text-[#627693]'>
                       <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        href="https://learnnex.in/growth-and-operations/"
+                        className="mb-3 inline-block hover:text-[#3b075f]"
                       >
-                        Product
+                        Growth & Operations Intern
                       </a>
                     </li>
-                    <li>
+                    <li className='text-[#627693]'>
                       <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        href="https://learnnex.in/refund_returns/"
+                        className="mb-3 inline-block hover:text-[#3b075f]"
                       >
-                        Careers
+                        Refund Policy
                       </a>
                     </li>
-                    <li>
+                    <li className='text-[#627693]'>
                       <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
+                        href="https://learnnex.in/terms-and-conditions/"
+                        className="mb-3 inline-block hover:text-[#3b075f]"
                       >
-                        Pricing
+                        Terms & Conditions
+                      </a>
+                    </li>
+                    <li className='text-[#627693]'>
+                      <a
+                        href="https://learnnex.in/privacy-policy/"
+                        className="mb-3 inline-block hover:text-[#3b075f]"
+                      >
+                        Privacy Policy
                       </a>
                     </li>
                   </ul>
@@ -225,68 +233,12 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Support
-                  </h4>
-
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Company
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Press media
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Our Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
-                </motion.div>
-
-                <motion.div
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
-
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
-                  }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="animate_top"
-                >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Newsletter
+                    Subscribe Now!
                   </h4>
                   <p className="mb-4 w-[90%]">
-                    Subscribe to receive future updates
+                    Don’t miss out on our future updates!
+
+                    Get subscribed now!
                   </p>
 
                   <form action="#">
@@ -294,7 +246,7 @@ const Footer = () => {
                       <input
                         type="text"
                         placeholder="Email address"
-                        className="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
+                        className="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-[#3b075f] focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-[#3b075f]"
                       />
 
                       <button
@@ -302,7 +254,7 @@ const Footer = () => {
                         className="absolute right-0 p-4"
                       >
                         <svg
-                          className="fill-[#757693] hover:fill-primary dark:fill-white"
+                          className="fill-[#757693] hover:text-[#3b075f] dark:fill-white"
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"
