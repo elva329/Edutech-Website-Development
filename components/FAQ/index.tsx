@@ -21,11 +21,11 @@ const FAQ = () => {
   return (
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30 bg-white">
+      <section className="overflow-hidden pb-20 lg:pb-15 xl:pb-20 bg-white">
         <div className="relative mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
           <div className="absolute -bottom-16 -z-1 h-full w-full">
           </div>
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-32.5 flex-col">
+          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-12.5 flex-col">
             <motion.div
               variants={{
                 hidden: {
@@ -44,12 +44,12 @@ const FAQ = () => {
               viewport={{ once: true }}
               className="animate_left md:w-2/5 lg:w-1/2"
             >
-              <h2 className="relative mb-6 text-3xl font-bold text-[#3b065f] dark:text-white xl:text-hero">
+              <div className="relative text43xl font-bold text-[#3b065f] dark:text-white xl:text-hero">
                 Frequently Asked Questions
-              </h2>
+              </div>
             </motion.div>
 
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full pr-50 pl-50">
               {faqData.map((faq, key) => (
                 <AccordionItem value={`item-${faq.id}`} key={faq.id}
                   className='
