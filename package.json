@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.1",
     "@types/bcrypt": "^5.0.1",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.32",
@@ -17,6 +18,8 @@
     "autoprefixer": "^10.4.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-autoplay": "^8.5.2",
+    "embla-carousel-react": "^8.5.2",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
