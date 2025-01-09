@@ -42,9 +42,9 @@ const FAQ = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left md:w-2/5 lg:w-1/2"
+              className="animate_left md:w-2/5 lg:w-1/2 mt-11"
             >
-              <div className="relative text43xl font-bold text-[#3b065f] dark:text-white xl:text-hero">
+              <div className="relative text43xl font-bold text-[#3b065f] xl:text-hero">
                 Frequently Asked Questions
               </div>
             </motion.div>

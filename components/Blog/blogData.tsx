@@ -4,40 +4,40 @@ const BlogData: Blog[] = [
   {
     _id: 1,
     mainImage: "/images/blog/blog-01.png",
-    title: "Free advertising for your online business",
+    title: "Trending Industry Tools",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Stay updated with LearnNex for cutting-edge industry-leading tech-relevant skills and knowledge.",
   },
   {
     _id: 2,
     mainImage: "/images/blog/blog-02.png",
-    title: "9 simple ways to improve your design skills",
+    title: "Government Certification",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Gain job market advantage with LearnNex's respected government-certified courses.",
   },
   {
-    _id: 2,
+    _id: 4,
     mainImage: "/images/blog/blog-03.png",
-    title: "Tips to quickly improve your coding speed.",
+    title: "Complete Placement Assistance",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "LearnNex prioritizes your success with comprehensive job placement support.",
   },
   {
-    _id: 1,
+    _id: 4,
     mainImage: "/images/blog/blog-03.png",
     title: "Free advertising for your online business",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    _id: 2,
+    _id: 5,
     mainImage: "/images/blog/blog-04.png",
-    title: "9 simple ways to improve your design skills",
+    title: "Exposure to the Corporate World",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "LearnNex’s live projects and internships provide you with hands-on experience.",
   },
   {
-    _id: 2,
+    _id: 6,
     mainImage: "/images/blog/blog-01.png",
     title: "Tips to quickly improve your coding speed.",
     metadata:
