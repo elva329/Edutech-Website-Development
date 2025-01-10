@@ -14,7 +14,23 @@ const FunFact = () => {
   )
 
   return (
-    <>
+    <motion.div
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: -20,
+        },
+
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 1, delay: 0.1 }}
+      viewport={{ once: true }}
+    >
       <div className='grid grid-cols-4 gap-4 w-full max-w-4xl bg-white mx-auto my-0 text-center'>
         <div className='bg-[#f8f7fc] rounded-3xl p-6'>
           <h2 className='text-6xl text-[#ff006a]'>3.7K+</h2>
@@ -67,7 +83,7 @@ const FunFact = () => {
         </Carousel>
       </section>
       {/* <!-- ===== Funfact End ===== --> */}
-    </>
+    </motion.div>
   );
 };
 
