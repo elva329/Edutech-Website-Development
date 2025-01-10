@@ -29,9 +29,9 @@ export default function Home() {
       <About />
       <CompanyCarousel />
       <Feature />
-
-      <FeaturesTab />
       <FunFact />
+      {/* <FeaturesTab /> */}
+
       <Integration />
       <CTA />
       <Testimonial />
