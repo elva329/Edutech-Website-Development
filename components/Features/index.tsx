@@ -8,7 +8,7 @@ const Feature = () => {
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
-      <section id="features" className="py-20 lg:py-25 xl:py-30 bg-white">
+      <section id="features" className="py-20 lg:py-25 xl:py-30 bg-white flex flex-col items-center">
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
@@ -29,6 +29,7 @@ const Feature = () => {
             {/* <!-- Features item End --> */}
           </div>
         </div>
+        <div className='bg-[rgb(255,0,106)] text-xl text-white rounded-3xl w-fit px-4 py-2 cursor-pointer mt-10'>Browser All Courses</div>
       </section>
 
       {/* <!-- ===== Features End ===== --> */}
