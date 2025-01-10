@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import SingleTestimonial from "./SingleTestimonial";
 import { testimonialData } from "./testimonialData";
+import Image from "next/image";
 
 const Testimonial = () => {
   return (
@@ -20,9 +21,9 @@ const Testimonial = () => {
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `TESTIMONIALS`,
-                subtitle: `Client’s Testimonials`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+                title: ``,
+                subtitle: `What Our Students Think About Us`,
+                description: `Our Students' reviews are the proof of our testament and commitment to always guarantee providing consistent quality education and active student guidance through various mentorship programs.`,
               }}
             />
           </div>
@@ -45,12 +46,19 @@ const Testimonial = () => {
           whileInView="visible"
           transition={{ duration: 1, delay: 0.1 }}
           viewport={{ once: true }}
-          className="animate_top mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0"
+          className="animate_top mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0 flex"
         >
           {/* <!-- Slider main container --> */}
           <div className="swiper testimonial-01 mb-20 pb-22.5">
             {/* <!-- Additional required wrapper --> */}
-            <Swiper
+            <Image
+              src='/images/testemonail/Testemonail-final.jpg'
+              width={600}
+              height={600}
+              alt='Testimonial'
+            />
+
+            {/* <Swiper
               spaceBetween={50}
               slidesPerView={2}
               autoplay={{
@@ -77,7 +85,7 @@ const Testimonial = () => {
                   <SingleTestimonial review={review} />
                 </SwiperSlide>
               ))}
-            </Swiper>
+            </Swiper> */}
           </div>
         </motion.div>
       </section>

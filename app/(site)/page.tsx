@@ -32,11 +32,12 @@ export default function Home() {
       <FunFact />
       {/* <FeaturesTab /> */}
 
-      <Integration />
-      <CTA />
+      {/* <Integration /> */}
       <Testimonial />
-      <Pricing />
-      <Contact />
+      <CTA />
+
+      {/* <Pricing /> */}
+      {/* <Contact /> */}
 
       <FAQ />
     </main>
