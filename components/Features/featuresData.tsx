@@ -3,45 +3,51 @@ import { Feature } from "@/types/feature";
 const featuresData: Feature[] = [
   {
     id: 1,
-    icon: "/images/icon/icon-01.svg",
-    title: "Crafted for SaaS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/courses/drone-enginnering-LearnNex.png",
+    title: "Drone Engineering",
+    description: "By Learnnex",
+    originalPrice: '10,999.00',
+    salePrice: '7,499.00'
   },
   {
     id: 2,
-    icon: "/images/icon/icon-02.svg",
-    title: "High-quality Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/courses/Business-WIZ.webp",
+    title: "Business Wiz Program: Your Pathway to Entrepreneurial Excellence",
+    description: "By Learnnex",
+    originalPrice: '1,599.00',
+    salePrice: '5,999.00'
   },
   {
     id: 3,
-    icon: "/images/icon/icon-03.svg",
-    title: "Next.js 13 + TypeScript",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/courses/TECH-WIZ.webp",
+    title: "Tech Wiz Program: The Ultimate Gateway to Tech Mastery",
+    description: "By Learnnex",
+    originalPrice: '25,000.00',
+    salePrice: '11,999.00'
   },
   {
     id: 4,
-    icon: "/images/icon/icon-04.svg",
-    title: "Sanity Blog and Docs",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/courses/Unity-Certified-User-Programmer-and-VR-developers.png",
+    title: "Unity Certified User Programmer and VR developers",
+    description: "By Learnnex",
+    originalPrice: '14,999.00',
+    salePrice: '9,999.00'
   },
   {
     id: 5,
-    icon: "/images/icon/icon-05.svg",
-    title: "DB, Auth and Stripe",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/courses/Cloud-Computing-by-ITS.png",
+    title: "Software Development by ITS",
+    description: "By Learnnex",
+    originalPrice: '14,999.00',
+    salePrice: '9,999.00'
   },
   {
     id: 6,
-    icon: "/images/icon/icon-06.svg",
-    title: "Regular Free Updates",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/courses/Cloud-Computing-by-ITS.png",
+    title: "Cloud Computing by ITS",
+    description: "By Learnnex",
+    originalPrice: '14,999.00',
+    salePrice: '9,999.00'
   },
 ];
 
