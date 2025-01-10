@@ -38,15 +38,15 @@ const FunFact = () => {
         </div>
         <div className='bg-[#f8f7fc] rounded-3xl p-6'>
           <h2 className='text-6xl text-[#ff006a]'>5.4K+</h2>
-          <span className='text-[#627693]'>Students Enrolled</span>
+          <span className='text-[#627693]'>Class Completed</span>
         </div>
         <div className='bg-[#f8f7fc] rounded-3xl p-6'>
           <h2 className='text-6xl text-[#ff006a]'>5.4K+</h2>
-          <span className='text-[#627693]'>Students Enrolled</span>
+          <span className='text-[#627693]'>Satisfaction Rate</span>
         </div>
         <div className='bg-[#f8f7fc] rounded-3xl p-6'>
           <h2 className='text-6xl text-[#ff006a]'>5.4K+</h2>
-          <span className='text-[#627693]'>Students Enrolled</span>
+          <span className='text-[#627693]'>Top Instructors</span>
         </div>
       </div>
       {/* <!-- ===== Funfact Start ===== --> */}
