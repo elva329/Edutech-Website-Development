@@ -15,8 +15,8 @@ import Testimonial from "@/components/Testimonial";
 import { CompanyCarousel } from '../../components/CompanyCarousel';
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-  description: "This is Home for Solid Pro",
+  title: "Learn Nex - Your Launchpad to Stardom!",
+  description: "",
   // other metadata
 };
 
