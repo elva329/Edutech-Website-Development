@@ -20,41 +20,55 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "Self Paced",
         newTab: false,
-        path: "/blog",
+        path: "/self-paced",
       },
       {
-        id: 34,
-        title: "Sign In",
+        id: 32,
+        title: "Mentor Led",
         newTab: false,
-        path: "/auth/signin",
-      },
-      {
-        id: 35,
-        title: "Sign Up",
-        newTab: false,
-        path: "/auth/signup",
-      },
-      {
-        id: 35,
-        title: "Docs",
-        newTab: false,
-        path: "/docs",
-      },
-      {
-        id: 35.1,
-        title: "Support",
-        newTab: false,
-        path: "/support",
-      },
-      {
-        id: 36,
-        title: "404",
-        newTab: false,
-        path: "/error",
-      },
-    ],
+        path: "/mentor-led",
+      }
+    ]
+    // submenu: [
+    //   {
+    //     id: 31,
+    //     title: "Blog Grid",
+    //     newTab: false,
+    //     path: "/blog",
+    //   },
+    //   {
+    //     id: 34,
+    //     title: "Sign In",
+    //     newTab: false,
+    //     path: "/auth/signin",
+    //   },
+    //   {
+    //     id: 35,
+    //     title: "Sign Up",
+    //     newTab: false,
+    //     path: "/auth/signup",
+    //   },
+    //   {
+    //     id: 35,
+    //     title: "Docs",
+    //     newTab: false,
+    //     path: "/docs",
+    //   },
+    //   {
+    //     id: 35.1,
+    //     title: "Support",
+    //     newTab: false,
+    //     path: "/support",
+    //   },
+    //   {
+    //     id: 36,
+    //     title: "404",
+    //     newTab: false,
+    //     path: "/error",
+    //   },
+    // ],
   },
   {
     id: 2.1,
