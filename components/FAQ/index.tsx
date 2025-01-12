@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-
+import Image from "next/image";
 
 const FAQ = () => {
   const [activeFaq, setActiveFaq] = useState(1);
@@ -22,10 +22,8 @@ const FAQ = () => {
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
       <section className="overflow-hidden pb-20 lg:pb-15 xl:pb-20 bg-white">
-        <div className="relative mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="absolute -bottom-16 -z-1 h-full w-full">
-          </div>
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center xl:gap-12.5 flex-col">
+        <div className="grid grid-cols-2 gap-2 bg-[#fefefe] mt-20">
+          <div className="flex flex-col pl-10">
             <motion.div
               variants={{
                 hidden: {
@@ -42,14 +40,14 @@ const FAQ = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left md:w-2/5 lg:w-1/2 mt-11"
+              className="animate_left"
             >
-              <div className="relative text43xl font-bold text-[#3b065f] xl:text-hero">
+              <div className="relative text43xl font-bold text-[#3b065f] xl:text-hero text-center">
                 Frequently Asked Questions
               </div>
             </motion.div>
 
-            <Accordion type="single" collapsible className="w-full pr-50 pl-50">
+            <Accordion type="single" collapsible className="w-full0">
               {faqData.map((faq, key) => (
                 <AccordionItem value={`item-${faq.id}`} key={faq.id}
                   className='
@@ -65,6 +63,15 @@ const FAQ = () => {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+          <div>
+            <Image
+              className="m-auto aspect-[555/548]"
+              src='/images/about/why-learn.png'
+              alt="Hero"
+              width={555}
+              height={548}
+            />
           </div>
         </div>
       </section>
