@@ -6,7 +6,7 @@ const AboutMission = () => {
   return (
     <section className="grid grid-cols-2 gap-4 w-full max-w-4xl mx-auto my-0 text-center py-20 lg:py-25 xl:py-15 bg-white">
       <Image
-        className="shadow-solid-l aspect-[159/154]"
+        className="aspect-[159/154]"
         src="/images/about/mission.png"
         alt="Hero"
         width={477}

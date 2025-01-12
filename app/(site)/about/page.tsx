@@ -1,16 +1,16 @@
-import BlogData from "@/components/Blog/blogData";
-import BlogItem from "@/components/Blog/BlogItem";
 import { Metadata } from "next";
 import About from '../../../components/About';
 import { CompanyCarousel } from '../../../components/CompanyCarousel';
-import Feature from '../../../components/Features';
-import FunFact from '../../../components/FunFact';
-import AboutMission from '../../../components/AboutMission';
+import AboutMission from '../../../components/About/AboutMission';
 import EnrollNumber from '../../../components/EnrollNumber';
+import CollegeCarousel from '../../../components/CollegeCarousel';
+import WhyLearn from '../../../components/WhyLearn';
+import Image from "next/image";
+import AboutBottom from '../../../components/About/AboutBottom';
 
 export const metadata: Metadata = {
-  title: "Blog Page - Solid SaaS Boilerplate",
-  description: "This is Blog page for Solid Pro",
+  title: "About Page - Solid SaaS Boilerplate",
+  description: "",
   // other metadata
 };
 
@@ -29,8 +29,9 @@ const AboutPage = async () => {
       <EnrollNumber />
       <CompanyCarousel />
       <AboutMission />
-
-      {/* <!-- ===== Blog Grid End ===== --> */}
+      <CollegeCarousel />
+      <WhyLearn />
+      <AboutBottom />
     </>
   );
 };
