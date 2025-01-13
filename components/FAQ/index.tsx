@@ -42,7 +42,7 @@ const FAQ = () => {
               viewport={{ once: true }}
               className="animate_left"
             >
-              <div className="relative text43xl font-bold text-[#3b065f] xl:text-hero text-center">
+              <div className="relative text43xl font-bold text-[#3b065f] xl:text-hero text-center mb-10">
                 Frequently Asked Questions
               </div>
             </motion.div>

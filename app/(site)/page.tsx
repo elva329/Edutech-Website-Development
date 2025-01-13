@@ -13,6 +13,7 @@ import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 import { CompanyCarousel } from '../../components/CompanyCarousel';
+import featuresData from '../../components/Features/featuresData';
 
 export const metadata: Metadata = {
   title: "Learn Nex - Your Launchpad to Stardom!",

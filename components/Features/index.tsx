@@ -1,10 +1,20 @@
 "use client";
 import React from "react";
-import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
+import { usePathname } from 'next/navigation'
+import { CoursePagination } from '../CoursePagination';
+import { CourseData } from '../../types/feature';
+import featuresData from './featuresData';
+import nextPageData from './nextPageData';
 
 const Feature = () => {
+  const pathname = usePathname();
+
+  console.log('pathname', pathname)
+
+  const data = pathname === '/self-paced/current-page' ? nextPageData : featuresData;
+
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
@@ -23,13 +33,14 @@ const Feature = () => {
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-5">
             {/* <!-- Features item Start --> */}
 
-            {featuresData.map((feature, key) => (
+            {data.map((feature, key) => (
               <SingleFeature feature={feature} key={key} />
             ))}
             {/* <!-- Features item End --> */}
           </div>
         </div>
-        <div className='bg-[rgb(255,0,106)] text-xl text-white rounded-3xl w-fit px-4 py-2 cursor-pointer mt-10'>Browser All Courses</div>
+        {pathname === '/' ? <div className='bg-[rgb(255,0,106)] text-xl text-white rounded-3xl w-fit px-4 py-2 cursor-pointer mt-10'>Browser All Courses</div> : <CoursePagination />}
+
       </section>
 
       {/* <!-- ===== Features End ===== --> */}

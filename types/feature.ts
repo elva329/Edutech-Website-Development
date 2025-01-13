@@ -1,4 +1,4 @@
-export type Feature = {
+export type CourseData = {
   id: number;
   icon: string;
   title: string;

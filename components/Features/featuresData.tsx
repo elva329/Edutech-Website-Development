@@ -1,6 +1,6 @@
-import { Feature } from "@/types/feature";
+import { CourseData } from "@/types/feature";
 
-const featuresData: Feature[] = [
+const featuresData: CourseData[] = [
   {
     id: 1,
     icon: "/images/courses/drone-enginnering-LearnNex.png",

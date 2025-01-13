@@ -1,9 +1,9 @@
 import React from "react";
-import { Feature } from "@/types/feature";
+import { CourseData } from "@/types/feature";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const SingleFeature = ({ feature }: { feature: Feature }) => {
+const SingleFeature = ({ feature }: { feature: CourseData }) => {
   const { icon, title, description, originalPrice, salePrice } = feature;
 
   return (

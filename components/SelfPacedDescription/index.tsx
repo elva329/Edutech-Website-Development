@@ -53,7 +53,7 @@ const SelfPacedDescription = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              <p className='text-4xl text-[#3b065f] mb-10'>
+              <p className='text-4xl text-[#3b065f] mb-10 mt-20'>
                 The Right Approach For A Brighter<span className='bg-gradient-to-r from-purple-600 via-red-500 to-indigo-400 text-transparent bg-clip-text '> Future</span>
               </p>
               <p className='text-[#4b5563] text-sm'>

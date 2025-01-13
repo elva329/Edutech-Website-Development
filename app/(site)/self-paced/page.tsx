@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Certifications from '../../../components/Certifications';
 import SelfPacedDescription from '../../../components/SelfPacedDescription';
 import Feature from '../../../components/Features';
+import { usePathname } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: "Self-Paced",
