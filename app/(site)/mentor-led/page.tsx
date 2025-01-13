@@ -5,7 +5,7 @@ import BotCampDescription from '../../../components/BotCampDescription';
 import Feature from '../../../components/Features';
 
 export const metadata: Metadata = {
-  title: "Self-Paced",
+  title: "Mentor-led",
   description: "",
   // other metadata
 };

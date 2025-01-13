@@ -13,7 +13,7 @@ const Feature = () => {
 
   console.log('pathname', pathname)
 
-  const data = pathname === '/self-paced/current-page' ? nextPageData : featuresData;
+  const data = pathname === '/self-paced/current-page' || '/mentor-led/current-page' ? nextPageData : featuresData;
 
   return (
     <>

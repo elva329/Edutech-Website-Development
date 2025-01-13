@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { usePathname } from 'next/navigation'
 
-const SelfPacedDescription = () => {
+const BotCampDescription = () => {
+  const pathname = usePathname();
+
   return (
     <>
       <section className="overflow-hidden pb-2 lg:pb-2 xl:pb-2 bg-white mt-10">
@@ -53,9 +56,13 @@ const SelfPacedDescription = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              <p className='text-4xl text-[#3b065f] mb-10 mt-20'>
+              {pathname === 'self-paced' ? <p className='text-4xl text-[#3b065f] mb-10 mt-20'>
                 The Right Approach For A Brighter<span className='bg-gradient-to-r from-purple-600 via-red-500 to-indigo-400 text-transparent bg-clip-text '> Future</span>
+              </p> : <p className='text-4xl text-[#3b065f] mb-10 mt-20'>
+                Shape Your Own Future With Industry Best<span className='bg-gradient-to-r from-purple-600 via-red-500 to-indigo-400 text-transparent bg-clip-text '> Mentors</span>
               </p>
+              }
+
               <p className='text-[#4b5563] text-sm'>
                 At LearnNex, we are committed to not only providing you with top-quality education but also helping you take the next step in your career.</p>
               <div className="mt-7.5 flex items-center gap-5">
@@ -114,4 +121,4 @@ const SelfPacedDescription = () => {
   );
 };
 
-export default SelfPacedDescription;
+export default BotCampDescription;
