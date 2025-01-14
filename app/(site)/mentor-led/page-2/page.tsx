@@ -2,10 +2,10 @@ import React from 'react'
 import Feature from '../../../../components/Features'
 import SelfPaced from '../page'
 
-const CurrentPage = () => {
+const MetorPageTwo = () => {
   return (
     <SelfPaced />
   )
 }
 
-export default CurrentPage
+export default MetorPageTwo

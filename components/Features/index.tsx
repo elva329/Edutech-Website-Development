@@ -4,7 +4,6 @@ import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
 import { usePathname } from 'next/navigation'
 import { CoursePagination } from '../CoursePagination';
-import { CourseData } from '../../types/feature';
 import featuresData from './featuresData';
 import nextPageData from './nextPageData';
 
@@ -13,7 +12,7 @@ const Feature = () => {
 
   console.log('pathname', pathname)
 
-  const data = pathname === '/self-paced/current-page' || '/mentor-led/current-page' ? nextPageData : featuresData;
+  const data = pathname.includes('page-2') ? nextPageData : featuresData;
 
   return (
     <>

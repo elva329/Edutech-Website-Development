@@ -2,9 +2,11 @@ import React from "react";
 import { CourseData } from "@/types/feature";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { usePathname } from 'next/navigation'
 
 const SingleFeature = ({ feature }: { feature: CourseData }) => {
-  const { icon, title, description, originalPrice, salePrice } = feature;
+  const { icon, title, description, originalPrice, salePrice, id } = feature;
+  const pathname = usePathname();
 
   return (
     <>
@@ -24,13 +26,13 @@ const SingleFeature = ({ feature }: { feature: CourseData }) => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top z-40 rounded-3xl  bg-[#f8f7fc] p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 xl:p-5 flex flex-col justify-between"
+        className="animate_top z-40 rounded-3xl bg-[#f8f7fc] p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 xl:p-5 flex flex-col justify-between"
       >
         <div className="relative flex h-220 w-342 items-center justify-center rounded-[4px] bg-primary">
           <Image src={icon} width={342} height={220} alt="title" />
         </div>
         <h3 className="mb-5 mt-7.5 text-xl font-semibold text-[#3b075f]">
-          {title}
+          {pathname.includes('mentor-led') && id !== 1 ? `${title}(Metor Led)` : title}
         </h3>
         <p className='text-[#4b5563] text-sm mb-4'>{description}</p>
         <div className='flex items-center justify-between'>
