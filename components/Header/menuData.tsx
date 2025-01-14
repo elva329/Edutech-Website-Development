@@ -71,10 +71,10 @@ const menuData: Menu[] = [
     // ],
   },
   {
-    id: 2.1,
+    id: 4,
     title: "Pre-Registration",
     newTab: false,
-    path: "/blog",
+    path: "/pre-registration",
   },
   {
     id: 2.3,
