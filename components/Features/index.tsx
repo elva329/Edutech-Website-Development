@@ -14,20 +14,6 @@ import proPicksData from './proPicksData';
 const Feature = () => {
   const pathname = usePathname();
 
-  console.log('pathname', pathname)
-
-
-  // const pathnames = new Map([
-  //   ['/', homePageCourseData],
-  //   ['/mentor-led', metorLedCourseData.slice(0, 6)],
-  //   ['/mentor-led/page-2', metorLedCourseData.slice(6, 12)],
-  //   ['/self-paced', selfPacedCourseData.slice(0, 6)],
-  //   ['/self-paced/page-2', selfPacedCourseData.slice(6, 12)],
-  //   ['/professional-advancement-series', professionalCourseData.slice(0, 6)],
-  //   ['/professional-advancement-series/page-2', professionalCourseData.slice(6, 12)],
-  //   ['/pro-picks', proPicksData]
-  // ])
-
   const combinedMap = new Map([
     ['/', {
       title: 'OUR POPULAR TRAINING PROGRAMS',
