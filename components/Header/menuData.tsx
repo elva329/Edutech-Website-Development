@@ -50,7 +50,7 @@ const menuData: Menu[] = [
     id: 4,
     title: "Pro Picks",
     newTab: false,
-    path: "/support",
+    path: "/pro-picks",
   },
   {
     id: 5,
