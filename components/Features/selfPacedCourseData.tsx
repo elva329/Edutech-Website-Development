@@ -54,7 +54,7 @@ const selfPacedCourseData: CourseData[] = [
     id: 7,
     icon: "/images/courses/pg2-Embedded-System.png",
     title: "Embedded System",
-    description: "By Learnnex",
+    description: "By Learnnex", // 
     originalPrice: '4,999.00',
     salePrice: '3,499.00'
   },
@@ -63,7 +63,7 @@ const selfPacedCourseData: CourseData[] = [
     icon: "/images/courses/pg2-AutoCAD.png",
     title: "AutoCAD",
     description: "By Learnnex",
-    originalPrice: '4,999.00',
+    originalPrice: '4,999.00', //
     salePrice: '3,499.00'
   },
   {
@@ -71,7 +71,7 @@ const selfPacedCourseData: CourseData[] = [
     icon: "/images/courses/pg2-Artificial-Intelligence.png",
     title: "Artificial Intelligence",
     description: "By Learnnex",
-    originalPrice: '4,999.00',
+    originalPrice: '4,999.00', //
     salePrice: '3,499.00'
   },
   {
@@ -80,7 +80,7 @@ const selfPacedCourseData: CourseData[] = [
     title: "Finance",
     description: "By Learnnex",
     originalPrice: '4,999.00',
-    salePrice: '3,499.00'
+    salePrice: '3,499.00' //
   },
   {
     id: 11,

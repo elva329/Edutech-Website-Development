@@ -54,6 +54,21 @@ const Feature = () => {
       title: 'PROGRAMS PICKED BY INDUSTRY PROFESSIONALS',
       subtitle: 'Take the next step of your career with Pro Picked Courses',
       data: proPicksData
+    }],
+    ['/all-course', {
+      title: 'INBDUSTRY BEST TRAING PROGRAMS OFFERED BY LEARNNEX',
+      subtitle: 'Take the next step of your career with Pro Picked Courses',
+      data: [...homePageCourseData, ...professionalCourseData.slice(5, 8)]
+    }],
+    ['/all-course/page-2', {
+      title: 'INBDUSTRY BEST TRAING PROGRAMS OFFERED BY LEARNNEX',
+      subtitle: 'Take the next step of your career with Pro Picked Courses',
+      data: [...professionalCourseData.slice(0, 5), ...selfPacedCourseData.slice(10, 12), ...metorLedCourseData.slice(1, 3)]
+    }],
+    ['/all-course/page-3', {
+      title: 'INBDUSTRY BEST TRAING PROGRAMS OFFERED BY LEARNNEX',
+      subtitle: 'Take the next step of your career with Pro Picked Courses',
+      data: [...metorLedCourseData.slice(4, 7), ...selfPacedCourseData.slice(5, 8)]
     }]
   ]);
 

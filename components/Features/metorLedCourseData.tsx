@@ -12,7 +12,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 2,
     icon: "/images/courses/pg2-Data-Analytics.png",
-    title: "Data Analytics",
+    title: "Data Analytics (Mentor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -20,7 +20,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 3,
     icon: "/images/courses/pg2-Digital-Marketing.png",
-    title: "Digital Marketing",
+    title: "Digital Marketing (Mentor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -28,7 +28,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 4,
     icon: "/images/courses/pg2-Finance.png",
-    title: "Finance",
+    title: "Finance (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -36,7 +36,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 5,
     icon: "/images/courses/pg3-Artificial-Intelligence.png",
-    title: "Artificial Intelligence",
+    title: "Artificial Intelligence (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -44,7 +44,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 6,
     icon: "/images/courses/pg2-AutoCAD.png",
-    title: "AutoCAD",
+    title: "AutoCAD (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -54,7 +54,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 7,
     icon: "/images/courses/pg2-Embedded-System.png",
-    title: "Embedded System",
+    title: "Embedded System (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -62,7 +62,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 8,
     icon: "/images/courses/p1-Internet-of-Things.png",
-    title: "Internet of Things",
+    title: "Internet of Things (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -70,7 +70,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 9,
     icon: "/images/courses/p1-Data-Science.png",
-    title: "Data Science",
+    title: "Data Science (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -78,7 +78,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 10,
     icon: "/images/courses/p1-Azure-Cloud-Computing.png",
-    title: "Azure Cloud Computing",
+    title: "Azure Cloud Computing (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -86,7 +86,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 11,
     icon: "/images/courses/p1-Machine-Learning-with-Python.png",
-    title: "Machine Learning with Python",
+    title: "Machine Learning with Python (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'
@@ -94,7 +94,7 @@ const metorLedCourseData: CourseData[] = [
   {
     id: 11,
     icon: "/images/courses/p1-Cyber-Security.png",
-    title: "Cyber Security",
+    title: "Cyber Security (Metor Led)",
     description: "By Learnnex",
     originalPrice: '7,999.00',
     salePrice: '5,499.00'

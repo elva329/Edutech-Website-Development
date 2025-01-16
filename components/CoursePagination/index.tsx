@@ -16,21 +16,24 @@ export function CoursePagination() {
     ['/self-paced', '/self-paced/page-2'],
     ['/mentor-led', '/mentor-led/page-2'],
     ['/professional-advancement-series', 'professional-advancement-series/page-2'],
+    ['/all-course', 'all-course/page-2'],
+    ['/all-course/page-2', '/all-course/page-3'],
   ])
 
   const prePathnames = new Map([
     ['/self-paced/page-2', '/self-paced'],
     ['/mentor-led/page-2', '/mentor-led'],
-    ['/professional-advancement-series/page-2', '/professional-advancement-series']
+    ['/professional-advancement-series/page-2', '/professional-advancement-series'],
+    ['/all-course/page-2', '/all-course'],
+    ['/all-course/page-3', '/all-course/page-2'],
+    ['/all-course/page-2', '/all-course'],
   ])
 
-  console.log('pathname111', pathname)
   return (
     <Pagination>
       <PaginationContent>
         <PaginationItem>
           {pathname !== '/pro-picks' && <PaginationPrevious href={prePathnames.get(pathname)} />}
-
         </PaginationItem>
         <PaginationItem>
           {pathname !== '/pro-picks' && <PaginationNext href={pathnames.get(pathname)} />}

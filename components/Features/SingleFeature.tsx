@@ -32,7 +32,7 @@ const SingleFeature = ({ feature }: { feature: CourseData }) => {
           <Image src={icon} width={342} height={220} alt="title" />
         </div>
         <h3 className="mb-5 mt-7.5 text-xl font-semibold text-[#3b075f]">
-          {pathname.includes('mentor-led') && id !== 1 ? `${title}(Metor Led)` : title}
+          {title}
         </h3>
         <p className='text-[#4b5563] text-sm mb-4'>{description}</p>
         <div className='flex items-center justify-between'>
