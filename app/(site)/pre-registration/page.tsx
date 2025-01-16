@@ -15,7 +15,7 @@ const PreRegistration = () => {
                 <span className='font-bold text-2xl mr-2'>₹999.00</span>
                 <del className='text-[#757c8e]'>₹1,999.00</del>
               </div>
-              <div className='rounded-2xl bg-[#ff006a] text-white flex items-center justify-center pt-1 pb-1 cursor-pointer'>Add to cart</div>
+              <div className='rounded-2xl bg-[#ff006a] text-white flex items-center justify-center pt-1 pb-1 cursor-pointer hover:opacity-80'>Add to cart</div>
               <div className='border' />
               <div className='flex items-center justify-start gap-2'>
                 <svg width={24} height={24} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M192.07 447.3m63.63 0l0 0q63.63 0 63.63 63.63l0 192.14q0 63.63-63.63 63.63l0 0q-63.63 0-63.63-63.63l0-192.14q0-63.63 63.63-63.63Z" fill="#ff006a" /><path d="M449.43 320.29m63.63 0l0 0q63.63 0 63.63 63.63l0 319.16q0 63.63-63.63 63.63l0 0q-63.63 0-63.63-63.63l0-319.16q0-63.63 63.63-63.63Z" fill="#ff006a" /><path d="M703.34 193.2m63.63 0l0 0q63.63 0 63.63 63.63l0 446.24q0 63.63-63.63 63.63l0 0q-63.63 0-63.63-63.63l0-446.24q0-63.63 63.63-63.63Z" fill="#ff006a" /></svg>

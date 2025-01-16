@@ -54,7 +54,8 @@ const Testimonial = () => {
             />
             <Link href='/about'>
               <div className='
-              bg-[rgb(255,0,106)] hover:bg-white text-white hover:text-[rgb(255,0,106)] border hover:border-[rgb(255,0,106)]  w-fit py-5 px-10 rounded-lg text-sm m-auto
+              bg-[rgb(255,0,106)] text-xm text-white rounded-3xl w-fit px-8 py-2 cursor-pointer hover:bg-white hover:text-[#ff006a]
+              border hover:border-[#ff006a] m-auto
               '>More About Us</div>
             </Link>
             {/* <Swiper

@@ -9,6 +9,7 @@ import professionalCourseData from './professionalCourseData';
 import selfPacedCourseData from './selfPacedCourseData';
 import homePageCourseData from './homePageCourseData';
 import proPicksData from './proPicksData';
+import Link from 'next/link';
 
 
 const Feature = () => {
@@ -96,7 +97,15 @@ const Feature = () => {
             ))}
           </div>
         </div>
-        {pathname === '/' ? <div className='bg-[rgb(255,0,106)] text-xl text-white rounded-3xl w-fit px-4 py-2 cursor-pointer'>Browser All Courses</div> : <CoursePagination />}
+        {pathname === '/' ?
+          <Link href='all-course'>
+            <div className='
+              bg-[rgb(255,0,106)] text-xm text-white rounded-3xl w-fit px-4 py-2 cursor-pointer hover:bg-white hover:text-[#ff006a]
+              border hover:border-[#ff006a]
+              '>Browser All Courses</div>
+          </Link>
+
+          : <CoursePagination />}
       </section>
     </>
   );

@@ -36,8 +36,8 @@ const SingleFeature = ({ feature }: { feature: CourseData }) => {
         </h3>
         <p className='text-[#4b5563] text-sm mb-4'>{description}</p>
         <div className='flex items-center justify-between'>
-          <del className='text-[#757c8e]'>₹{originalPrice}</del>
-          <p className='text-[rgb(255,0,106)] text-xl'>₹{salePrice}</p>
+          <del className='text-[#757c8e] mr-2'>₹{originalPrice}</del>
+          <p className='text-[rgb(255,0,106)] text-xl flex-1'>₹{salePrice}</p>
           <div className='flex py-3 px-4 border border-[#ff006a] rounded-3xl text-[#ff006a] text-sm cursor-pointer hover:bg-[#ff006a] hover:text-white'>
             <svg
               viewBox="0 0 1024 1024"
