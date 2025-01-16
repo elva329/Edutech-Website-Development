@@ -13,7 +13,7 @@ import { CompanyCarousel } from '../../components/CompanyCarousel';
 export const metadata: Metadata = {
   title: "Learn Nex - Your Launchpad to Stardom!",
   description: "",
-  // other metadata
+  icons: '/images/LearnNex-logo.png'
 };
 
 export default function Home() {
