@@ -44,12 +44,14 @@ const Hero = () => {
                     >
                       Find Programs
                     </button></Link>
-                    <button
-                      aria-label="get started button"
-                      className="flex rounded-full bg-[rgba(248,247,252,.15)] px-7.5 py-2.5 text-white duration-300 ease-in-out"
-                    >
-                      Get In Touch
-                    </button>
+                    <Link href="/contact-us">
+                      <button
+                        aria-label="get started button"
+                        className="flex rounded-full bg-[rgba(248,247,252,.15)] px-7.5 py-2.5 text-white duration-300 ease-in-out"
+                      >
+                        Get In Touch
+                      </button>
+                    </Link>
                   </div>
                 </form>
               </div>

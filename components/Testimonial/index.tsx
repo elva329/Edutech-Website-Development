@@ -1,16 +1,11 @@
 "use client";
 import SectionHeader from "../Common/SectionHeader";
-
-import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import { motion } from "framer-motion";
-import SingleTestimonial from "./SingleTestimonial";
-import { testimonialData } from "./testimonialData";
 import Image from "next/image";
+import Link from "next/link";
 
 const Testimonial = () => {
   return (
@@ -57,7 +52,11 @@ const Testimonial = () => {
               height={600}
               alt='Testimonial'
             />
-
+            <Link href='/about'>
+              <div className='
+              bg-[rgb(255,0,106)] hover:bg-white text-white hover:text-[rgb(255,0,106)] border hover:border-[rgb(255,0,106)]  w-fit py-5 px-10 rounded-lg text-sm m-auto
+              '>More About Us</div>
+            </Link>
             {/* <Swiper
               spaceBetween={50}
               slidesPerView={2}

@@ -27,21 +27,7 @@ const BlogData: Blog[] = [
     mainImage: "/images/blog/blog-03.png",
     title: "Free advertising for your online business",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
-  },
-  {
-    _id: 5,
-    mainImage: "/images/blog/blog-04.png",
-    title: "Exposure to the Corporate World",
-    metadata:
       "LearnNex’s live projects and internships provide you with hands-on experience.",
-  },
-  {
-    _id: 6,
-    mainImage: "/images/blog/blog-01.png",
-    title: "Tips to quickly improve your coding speed.",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
 ];
 
