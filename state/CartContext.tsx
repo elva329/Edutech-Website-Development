@@ -39,12 +39,11 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   // Add item to cart (ensure no duplicates)
   const addToCart = (item: string) => {
     setCart((prevCart) => {
-      if (!prevCart.includes(item)) {
-        return [...prevCart, item];
-      }
-      return prevCart;
+      // No check for duplicates, just add the item every time
+      return [...prevCart, item];
     });
   };
+
 
   // Remove item from cart
   const removeFromCart = (item: string) => {

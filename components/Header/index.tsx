@@ -11,7 +11,9 @@ const Header = () => {
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const pathUrl = usePathname()
-  // const { getCartCount } = useCart();
+  const { getCartCount } = useCart();
+  let cart = localStorage.getItem('shoppingCart');
+  const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type assertion to array
 
   // const getFromLocalStorage = (key: string) => {
   //   if (!key || typeof window === 'undefined') {
@@ -41,8 +43,7 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
 
-    let cart = localStorage.getItem('shoppingCart');
-    const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type assertion to array
+
 
     if (cartArray) {
       setCount(cartArray.length);  // Update state with cart from localStorage
@@ -171,7 +172,7 @@ const Header = () => {
               flex items-center justify-center
               text-xs
               absolute -top-1 -right-1
-              '>{count}</div>
+              '>{getCartCount()}</div>
           </div>
         </div>
       </div>
