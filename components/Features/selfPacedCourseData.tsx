@@ -2,7 +2,7 @@ import { CourseData } from "@/types/feature";
 
 const selfPacedCourseData: CourseData[] = [
   {
-    id: 1,
+    id: 'self-1',
     icon: "/images/courses/p1-Full-Stack-Web-Development.png",
     title: "Full Stack Web Development",
     description: "By Learnnex",
@@ -10,7 +10,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 2,
+    id: 'self-2',
     icon: "/images/courses/p1-Cyber-Security.png",
     title: "Cyber Security",
     description: "By Learnnex",
@@ -18,7 +18,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 3,
+    id: 'self-3',
     icon: "/images/courses/p1-Machine-Learning-with-Python.png",
     title: "Machine Learning with Python",
     description: "By Learnnex",
@@ -26,7 +26,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 4,
+    id: 'self-4',
     icon: "/images/courses/p1-Azure-Cloud-Computing.png",
     title: "Azure Cloud Computing",
     description: "By Learnnex",
@@ -34,7 +34,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 5,
+    id: 'self-5',
     icon: "/images/courses/p1-Data-Science.png",
     title: "Data Science",
     description: "By Learnnex",
@@ -42,7 +42,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 6,
+    id: 'self-6',
     icon: "/images/courses/p1-Internet-of-Things.png",
     title: "Internet of Things",
     description: "By Learnnex",
@@ -51,7 +51,7 @@ const selfPacedCourseData: CourseData[] = [
   },
   // page 2
   {
-    id: 7,
+    id: 'self-7',
     icon: "/images/courses/pg2-Embedded-System.png",
     title: "Embedded System",
     description: "By Learnnex", // 
@@ -59,7 +59,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 8,
+    id: 'self-8',
     icon: "/images/courses/pg2-AutoCAD.png",
     title: "AutoCAD",
     description: "By Learnnex",
@@ -67,7 +67,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 9,
+    id: 'self-9',
     icon: "/images/courses/pg2-Artificial-Intelligence.png",
     title: "Artificial Intelligence",
     description: "By Learnnex",
@@ -75,7 +75,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 10,
+    id: 'self-10',
     icon: "/images/courses/pg2-Finance.png",
     title: "Finance",
     description: "By Learnnex",
@@ -83,7 +83,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00' //
   },
   {
-    id: 11,
+    id: 'self-11',
     icon: "/images/courses/pg2-Digital-Marketing.png",
     title: "Digital Marketing",
     description: "By Learnnex",
@@ -91,7 +91,7 @@ const selfPacedCourseData: CourseData[] = [
     salePrice: '3,499.00'
   },
   {
-    id: 12,
+    id: 'self-12',
     icon: "/images/courses/pg2-Data-Analytics.png",
     title: "Data Analytics",
     description: "By Learnnex",

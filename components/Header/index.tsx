@@ -4,13 +4,30 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import menuData from "./menuData";
+import { useCart } from '../../state/CartContext'
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const pathUrl = usePathname()
+  // const { getCartCount } = useCart();
 
-  const pathUrl = usePathname();
+  // const getFromLocalStorage = (key: string) => {
+  //   if (!key || typeof window === 'undefined') {
+  //     return []
+  //   }
+  //   return localStorage.getItem(key)
+  // }
+
+  // const storedCart = getFromLocalStorage('shoppingCart') || [];
+
+  // console.log('storedCart', storedCart)
+
+  // const storedCart = localStorage.getItem('shoppingCart');
+  const [count, setCount] = useState(0)
+
+  // console.log('count', getCartCount())
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -23,7 +40,19 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
-  });
+
+    let cart = localStorage.getItem('shoppingCart');
+    const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type assertion to array
+
+    if (cartArray) {
+      setCount(cartArray.length);  // Update state with cart from localStorage
+    }
+
+    return () => {
+      setCount(0)
+    }
+
+  }, [count]);
 
   return (
     <header
@@ -135,8 +164,14 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="mt-7 flex items-center gap-6 xl:mt-0 cursor-pointer">
+          <div className="mt-7 flex items-center gap-6 xl:mt-0 cursor-pointer relative">
             <svg fill="none" height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg"><g fill="#212121"><path d="m2.5 2c-.27614 0-.5.22386-.5.5s.22386.5.5.5h.2457c.22324 0 .41943.14799.48076.36264l1.58556 5.54944c.18398.64395.77256 1.08792 1.44228 1.08792h4.5687c.6133 0 1.1649-.37343 1.3927-.94291l1.4743-3.6857c.2627-.65686-.2211-1.37139-.9285-1.37139h-8.31292l-.2606-.91208c-.18398-.64395-.77256-1.08792-1.44228-1.08792z" /><path d="m6.5 14c.82843 0 1.5-.6716 1.5-1.5s-.67157-1.5-1.5-1.5-1.5.6716-1.5 1.5.67157 1.5 1.5 1.5z" /><path d="m10.5 14c.8284 0 1.5-.6716 1.5-1.5s-.6716-1.5-1.5-1.5c-.82843 0-1.5.6716-1.5 1.5s.67157 1.5 1.5 1.5z" /></g></svg>
+            <div className='
+              bg-[#ff006a] text-white w-4 h-4 rounded-full
+              flex items-center justify-center
+              text-xs
+              absolute -top-1 -right-1
+              '>{count}</div>
           </div>
         </div>
       </div>

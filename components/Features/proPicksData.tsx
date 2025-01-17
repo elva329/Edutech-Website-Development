@@ -2,7 +2,7 @@ import { CourseData } from "@/types/feature";
 
 const proPicksData: CourseData[] = [
   {
-    id: 1,
+    id: 'pro-pick-1',
     icon: "/images/pro-picks/Business-WIZ.webp",
     title: "Business Wiz Program: Your Pathway to Entrepreneurial Excellence",
     description: "By Learnnex",
@@ -10,7 +10,7 @@ const proPicksData: CourseData[] = [
     salePrice: '5,999.00'
   },
   {
-    id: 2,
+    id: 'pro-pick-2',
     icon: "/images/pro-picks/TECH-WIZ.webp",
     title: "Tech Wiz Program: The Ultimate Gateway to Tech Mastery",
     description: "By Learnnex",

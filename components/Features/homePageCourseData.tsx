@@ -2,7 +2,7 @@ import { CourseData } from "@/types/feature";
 
 const homePageCourseData: CourseData[] = [
   {
-    id: 1,
+    id: 'home-1',
     icon: "/images/courses/drone-enginnering-LearnNex.png",
     title: "Drone Engineering",
     description: "By Learnnex",
@@ -10,7 +10,7 @@ const homePageCourseData: CourseData[] = [
     salePrice: '3,499.00'  //home
   },
   {
-    id: 2,
+    id: 'home-2',
     icon: "/images/courses/Business-WIZ.webp",
     title: "Business Wiz Program: Your Pathway to Entrepreneurial Excellence",
     description: "By Learnnex",
@@ -18,7 +18,7 @@ const homePageCourseData: CourseData[] = [
     salePrice: '3,499.00'  // home
   },
   {
-    id: 3,
+    id: 'home-3',
     icon: "/images/courses/TECH-WIZ.webp",
     title: "Tech Wiz Program: The Ultimate Gateway to Tech Mastery",
     description: "By Learnnex",
@@ -26,7 +26,7 @@ const homePageCourseData: CourseData[] = [
     salePrice: '3,499.00' //home
   },
   {
-    id: 4,
+    id: 'home-4',
     icon: "/images/courses/Unity-Certified-User-Programmer-and-VR-developers.png",
     title: "Unity Certified User Programmer and VR developers",
     description: "By Learnnex",
@@ -34,7 +34,7 @@ const homePageCourseData: CourseData[] = [
     salePrice: '3,499.00' //home 
   },
   {
-    id: 5,
+    id: 'home-5',
     icon: "/images/courses/Cloud-Computing-by-ITS.png",
     title: "Software Development by ITS",
     description: "By Learnnex",
@@ -42,7 +42,7 @@ const homePageCourseData: CourseData[] = [
     salePrice: '3,499.00' //home
   },
   {
-    id: 6,
+    id: 'home-6',
     icon: "/images/courses/Cloud-Computing-by-ITS.png",
     title: "Cloud Computing by ITS",
     description: "By Learnnex",

@@ -1,5 +1,5 @@
 export type CourseData = {
-  id: number;
+  id: string;
   icon: string;
   title: string;
   description: string;

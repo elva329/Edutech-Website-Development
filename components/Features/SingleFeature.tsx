@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CourseData } from "@/types/feature";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { usePathname } from 'next/navigation'
+import { useCart } from '../../state/CartContext'
 
 const SingleFeature = ({ feature }: { feature: CourseData }) => {
   const { icon, title, description, originalPrice, salePrice, id } = feature;
-  const pathname = usePathname();
+  const [cart, setCart] = useState<string[]>([]);
+  const { addToCart } = useCart();
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem('shoppingCart');
+    if (storedCart) {
+      setCart(JSON.parse(storedCart));  // Update state with cart from localStorage
+    }
+  }, []);
+
+  const handleAddToCart = () => {
+    let cart = localStorage.getItem('shoppingCart');
+    const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type assertion to array
+
+    // Add the new item to the cart array
+    cartArray.push(id);
+    setCart(cartArray)
+    addToCart(id)
+
+    // Save the updated cart back into localStorage
+    localStorage.setItem('shoppingCart', JSON.stringify(cartArray));
+  }
 
   return (
     <>
@@ -38,7 +59,11 @@ const SingleFeature = ({ feature }: { feature: CourseData }) => {
         <div className='flex items-center justify-between'>
           <del className='text-[#757c8e] mr-2'>₹{originalPrice}</del>
           <p className='text-[rgb(255,0,106)] text-xl flex-1'>₹{salePrice}</p>
-          <div className='flex py-3 px-4 border border-[#ff006a] rounded-3xl text-[#ff006a] text-sm cursor-pointer hover:bg-[#ff006a] hover:text-white'>
+          <div className='
+            flex py-3 px-4 border border-[#ff006a] rounded-3xl 
+            text-[#ff006a] text-sm cursor-pointer hover:bg-[#ff006a] hover:text-white'
+            onClick={handleAddToCart}
+          >
             <svg
               viewBox="0 0 1024 1024"
               version="1.1" xmlns="http://www.w3.org/2000/svg" width={20} height={20}
@@ -47,7 +72,7 @@ const SingleFeature = ({ feature }: { feature: CourseData }) => {
               <path d="M455 851.2m-56.8 0a56.8 56.8 0 1 0 113.6 0 56.8 56.8 0 1 0-113.6 0Z" className='fill-current hover:fill-white' />
               <path d="M773.6 851.2m-56.8 0a56.8 56.8 0 1 0 113.6 0 56.8 56.8 0 1 0-113.6 0Z" className='fill-current hover:fill-white' />
             </svg>
-            <span className='ml-2'>Add to cart</span>
+            <span className='ml-2' >Add to cart</span>
           </div>
         </div>
       </motion.div>

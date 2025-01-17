@@ -93,7 +93,7 @@ const Feature = () => {
           />
           <div className={className}>
             {pageData.data.map((feature, key) => (
-              <SingleFeature feature={feature} key={key} />
+              <SingleFeature feature={feature} key={feature.id} />
             ))}
           </div>
         </div>

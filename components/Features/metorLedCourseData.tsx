@@ -2,7 +2,7 @@ import { CourseData } from "@/types/feature";
 
 const metorLedCourseData: CourseData[] = [
   {
-    id: 1,
+    id: 'metor-1',
     icon: "/images/courses/drone-enginnering-LearnNex.png",
     title: "Drone Engineering",
     description: "By Learnnex",
@@ -10,7 +10,7 @@ const metorLedCourseData: CourseData[] = [
     salePrice: '7,499.00'
   },
   {
-    id: 2,
+    id: 'metor-2',
     icon: "/images/courses/pg2-Data-Analytics.png",
     title: "Data Analytics (Mentor Led)",
     description: "By Learnnex",
@@ -18,7 +18,7 @@ const metorLedCourseData: CourseData[] = [
     salePrice: '5,499.00'
   },
   {
-    id: 3,
+    id: 'metor-3',
     icon: "/images/courses/pg2-Digital-Marketing.png",
     title: "Digital Marketing (Mentor Led)",
     description: "By Learnnex",
@@ -26,7 +26,7 @@ const metorLedCourseData: CourseData[] = [
     salePrice: '5,499.00'
   },
   {
-    id: 4,
+    id: 'metor-4',
     icon: "/images/courses/pg2-Finance.png",
     title: "Finance (Metor Led)",
     description: "By Learnnex",
@@ -34,7 +34,7 @@ const metorLedCourseData: CourseData[] = [
     salePrice: '5,499.00'
   },
   {
-    id: 5,
+    id: 'metor-5',
     icon: "/images/courses/pg3-Artificial-Intelligence.png",
     title: "Artificial Intelligence (Metor Led)",
     description: "By Learnnex",
@@ -42,7 +42,7 @@ const metorLedCourseData: CourseData[] = [
     salePrice: '5,499.00'
   },
   {
-    id: 6,
+    id: 'metor-6',
     icon: "/images/courses/pg2-AutoCAD.png",
     title: "AutoCAD (Metor Led)",
     description: "By Learnnex",
