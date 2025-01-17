@@ -50,7 +50,7 @@ const SingleFeature = ({ feature }: { feature: CourseData }) => {
         className="animate_top z-40 rounded-3xl bg-[#f8f7fc] p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 xl:p-5 flex flex-col justify-between"
       >
         <div className="relative flex h-220 w-342 items-center justify-center rounded-[4px] bg-primary">
-          <Image src={icon} width={342} height={220} alt="title" />
+          <Image src={icon} width={342} height={220} alt="title" className='aspect-[342/220]' priority={false} />
         </div>
         <h3 className="mb-5 mt-7.5 text-xl font-semibold text-[#3b075f]">
           {title}
