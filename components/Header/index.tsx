@@ -12,24 +12,10 @@ const Header = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
   const pathUrl = usePathname()
   const { getCartCount } = useCart();
-  let cart = localStorage.getItem('shoppingCart');
-  const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type assertion to array
-
-  // const getFromLocalStorage = (key: string) => {
-  //   if (!key || typeof window === 'undefined') {
-  //     return []
-  //   }
-  //   return localStorage.getItem(key)
-  // }
-
-  // const storedCart = getFromLocalStorage('shoppingCart') || [];
-
-  // console.log('storedCart', storedCart)
-
-  // const storedCart = localStorage.getItem('shoppingCart');
+  const [isMounted, setIsMounted] = useState(false);
+  const [localStorageData, setLocalStorageData] = useState<string[]>([]);
   const [count, setCount] = useState(0)
 
-  // console.log('count', getCartCount())
 
   // Sticky menu
   const handleStickyMenu = () => {
@@ -43,10 +29,15 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
 
+    setIsMounted(true);
 
-
-    if (cartArray) {
-      setCount(cartArray.length);  // Update state with cart from localStorage
+    if (typeof window !== "undefined" && localStorage) {
+      let cart = localStorage.getItem('shoppingCart');
+      const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type 
+      setLocalStorageData(cartArray)
+      if (cartArray) {
+        setCount(cartArray.length);  // Update state with cart from localStorage
+      }
     }
 
     return () => {
@@ -54,6 +45,12 @@ const Header = () => {
     }
 
   }, [count]);
+
+
+  if (!isMounted) {
+    // Optionally return null or a loading spinner to avoid SSR mismatch
+    return null;
+  }
 
   return (
     <header
@@ -171,8 +168,7 @@ const Header = () => {
               bg-[#ff006a] text-white w-4 h-4 rounded-full
               flex items-center justify-center
               text-xs
-              absolute -top-1 -right-1
-              '>{getCartCount()}</div>
+              absolute -top-1 -right-1'>{getCartCount()}</div>
           </div>
         </div>
       </div>
