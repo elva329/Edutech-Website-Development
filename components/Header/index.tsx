@@ -23,18 +23,20 @@ import metorLedCourseData from '../Features/metorLedCourseData';
 import professionalCourseData from '../Features/professionalCourseData';
 import proPicksData from '../Features/proPicksData';
 import { CourseData } from '../../types/feature';
+import homePageCourseData from '../Features/homePageCourseData';
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const pathUrl = usePathname()
-  const { getCartCount } = useCart();
+  const { getCartCount, cart, removeFromCart } = useCart();
   const [isMounted, setIsMounted] = useState(false);
   const [localStorageData, setLocalStorageData] = useState<string[]>([]);
   const [count, setCount] = useState(0);
 
   const totalCourse: CourseData[] = [
+    ...homePageCourseData,
     ...selfPacedCourseData,
     ...metorLedCourseData,
     ...professionalCourseData,
@@ -51,7 +53,7 @@ const Header = () => {
       courseMap.set(course.id, course);
     }
 
-    for (const data of localStorageData) {
+    for (const data of cart) {
       if (courseMap.has(data)) {
         const course = courseMap.get(data)!;
         selectedCourseData.push({
@@ -124,6 +126,11 @@ const Header = () => {
         absolute -top-1 -right-1'>{getCartCount()}</div>
       </div>
     )
+  }
+
+  const handleCourseDelete = (id: string) => {
+    removeFromCart(id);
+    setLocalStorageData(localStorageData)
   }
 
   return (
@@ -241,19 +248,20 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent className='z-99999'>
               <div className="grid gap-4 py-4 max-h-[90%] overflow-y-scroll">
-                {getSelectedCourse().map(course => {
+                {getSelectedCourse().length > 0 && getSelectedCourse().map(course => {
                   return <div className="grid grid-cols-2 items-start border-b pb-6" key={course.id}>
                     <Image src={course.icon} width={140} height={86} alt="title" className='aspect-[70/43]' priority={false} />
                     <div>
                       <div className='text-sm mb-5'>{course.title}</div>
                       <div className='flex gap-6 text-sm'>
                         1 * ₹{course.salePrice}
-                        <svg fill="#000000" version="1.1" id="Capa_1"
-                          width="18px" height="18px" viewBox="0 0 482.428 482.429"
-                        >
-                          <g>
+                        <div className='cursor-pointer' onClick={() => handleCourseDelete(course.id)}>
+                          <svg fill="#000000" version="1.1" id="Capa_1"
+                            width="18px" height="18px" viewBox="0 0 482.428 482.429"
+                          >
                             <g>
-                              <path d="M381.163,57.799h-75.094C302.323,25.316,274.686,0,241.214,0c-33.471,0-61.104,25.315-64.85,57.799h-75.098
+                              <g>
+                                <path d="M381.163,57.799h-75.094C302.323,25.316,274.686,0,241.214,0c-33.471,0-61.104,25.315-64.85,57.799h-75.098
 			c-30.39,0-55.111,24.728-55.111,55.117v2.828c0,23.223,14.46,43.1,34.83,51.199v260.369c0,30.39,24.724,55.117,55.112,55.117
 			h210.236c30.389,0,55.111-24.729,55.111-55.117V166.944c20.369-8.1,34.83-27.977,34.83-51.199v-2.828
 			C436.274,82.527,411.551,57.799,381.163,57.799z M241.214,26.139c19.037,0,34.927,13.645,38.443,31.66h-76.879
@@ -261,15 +269,17 @@ const Header = () => {
 			c-15.973,0-28.973-13.002-28.973-28.979V170.861h268.182V427.312z M410.135,115.744c0,15.978-13,28.979-28.973,28.979H101.266
 			c-15.973,0-28.973-13.001-28.973-28.979v-2.828c0-15.978,13-28.979,28.973-28.979h279.897c15.973,0,28.973,13.001,28.973,28.979
 			V115.744z"/>
-                              <path d="M171.144,422.863c7.218,0,13.069-5.853,13.069-13.068V262.641c0-7.216-5.852-13.07-13.069-13.07
+                                <path d="M171.144,422.863c7.218,0,13.069-5.853,13.069-13.068V262.641c0-7.216-5.852-13.07-13.069-13.07
 			c-7.217,0-13.069,5.854-13.069,13.07v147.154C158.074,417.012,163.926,422.863,171.144,422.863z"/>
-                              <path d="M241.214,422.863c7.218,0,13.07-5.853,13.07-13.068V262.641c0-7.216-5.854-13.07-13.07-13.07
+                                <path d="M241.214,422.863c7.218,0,13.07-5.853,13.07-13.068V262.641c0-7.216-5.854-13.07-13.07-13.07
 			c-7.217,0-13.069,5.854-13.069,13.07v147.154C228.145,417.012,233.996,422.863,241.214,422.863z"/>
-                              <path d="M311.284,422.863c7.217,0,13.068-5.853,13.068-13.068V262.641c0-7.216-5.852-13.07-13.068-13.07
+                                <path d="M311.284,422.863c7.217,0,13.068-5.853,13.068-13.068V262.641c0-7.216-5.852-13.07-13.068-13.07
 			c-7.219,0-13.07,5.854-13.07,13.07v147.154C298.213,417.012,304.067,422.863,311.284,422.863z"/>
+                              </g>
                             </g>
-                          </g>
-                        </svg>
+                          </svg>
+                        </div>
+
                       </div>
 
                     </div>
@@ -277,15 +287,18 @@ const Header = () => {
                 })}
 
               </div>
-              <div className='text-lg'>Subtotal: ₹{totalSalePrice}</div>
-              <SheetFooter>
-                <SheetClose asChild>
-                  <Button type="button">View Cart</Button>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button type="submit">Checkout</Button>
-                </SheetClose>
-              </SheetFooter>
+              {getSelectedCourse().length > 0 ? <>
+                <div className='text-lg'>Subtotal: ₹{totalSalePrice}</div>
+                <SheetFooter>
+                  <SheetClose asChild>
+                    <Button type="button">View Cart</Button>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Button type="submit">Checkout</Button>
+                  </SheetClose>
+                </SheetFooter>
+              </> : <div>No products in the cart.</div>}
+
             </SheetContent>
           </Sheet>
         </div>
