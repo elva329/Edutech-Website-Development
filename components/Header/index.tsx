@@ -24,6 +24,7 @@ import professionalCourseData from '../Features/professionalCourseData';
 import proPicksData from '../Features/proPicksData';
 import { CourseData } from '../../types/feature';
 import homePageCourseData from '../Features/homePageCourseData';
+import { totalCourse } from '../../constants';
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -35,13 +36,6 @@ const Header = () => {
   const [localStorageData, setLocalStorageData] = useState<string[]>([]);
   const [count, setCount] = useState(0);
 
-  const totalCourse: CourseData[] = [
-    ...homePageCourseData,
-    ...selfPacedCourseData,
-    ...metorLedCourseData,
-    ...professionalCourseData,
-    ...proPicksData
-  ];
   // const localStorageDataSet = new Set(localStorageData);
 
   const getSelectedCourse = () => {
@@ -290,7 +284,9 @@ const Header = () => {
                 <div className='text-lg'>Subtotal: ₹{totalSalePrice}</div>
                 <SheetFooter>
                   <SheetClose asChild>
-                    <Button type="button">View Cart</Button>
+                    <Link href='cart'>
+                      <Button type="button">View Cart</Button>
+                    </Link>
                   </SheetClose>
                   <SheetClose asChild>
                     <Button type="submit">Checkout</Button>

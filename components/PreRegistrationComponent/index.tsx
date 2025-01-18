@@ -1,23 +1,22 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from "next/image";
 import { useCart } from '../../state/CartContext'
 
 const PreRegistrationComponent = () => {
-  // const { addToCart } = useCart();
+  const [cart, setCart] = useState<string[]>([]);
+  const { addToCart } = useCart();
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem('shoppingCart');
+    if (storedCart) {
+      setCart(JSON.parse(storedCart));  // Update state with cart from localStorage
+    }
+  }, []);
 
   const handleAddToCart = () => {
-    let cart = localStorage.getItem('shoppingCart');
-    const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type assertion to array
-
     // Add the new item to the cart array
-    cartArray.push('pre-reg');
-
-    // Save the updated cart back into localStorage
-    localStorage.setItem('shoppingCart', JSON.stringify(cartArray));
-
-    // addToCart('pre-reg')
-
+    addToCart('pre-reg');
   }
 
   return (

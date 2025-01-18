@@ -30,11 +30,11 @@ const Footer = () => {
               >
                 <a href="/" className="relative">
                   <Image
-                    width={110}
-                    height={80}
+                    width={448}
+                    height={103}
                     src="/images/logo/LearnNex-logo-footer.png"
                     alt="Logo"
-                    className="aspect-[110/80]"
+                    className="aspect-[397/91]"
                   />
                 </a>
 

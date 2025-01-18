@@ -39,11 +39,20 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   // Add item to cart (ensure no duplicates)
   const addToCart = (item: string) => {
     setCart((prevCart) => {
-      // No check for duplicates, just add the item every time
-      return [...prevCart, item];
+      // Only add the item if it is not already in the cart
+      if (!prevCart.includes(item)) {
+        return [...prevCart, item];
+      }
+      // Return the cart unchanged if the item is already in the cart
+      return prevCart;
     });
-  };
+    const currentCartFromStorage = JSON.parse(localStorage.getItem("shoppingCart") || "[]");
 
+    if (!currentCartFromStorage.includes(item)) {
+      currentCartFromStorage.push(item);
+      localStorage.setItem("shoppingCart", JSON.stringify(currentCartFromStorage));
+    }
+  };
 
   // Remove item from cart
   const removeFromCart = (item: string) => {

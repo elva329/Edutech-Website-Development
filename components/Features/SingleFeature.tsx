@@ -21,12 +21,12 @@ const SingleFeature = ({ feature }: { feature: CourseData }) => {
     const cartArray: string[] = cart ? JSON.parse(cart) : [];  // Type assertion to array
 
     // Add the new item to the cart array
-    cartArray.push(id);
-    setCart(cartArray)
+    // cartArray.push(id);
+    // setCart(cartArray)
     addToCart(id)
 
     // Save the updated cart back into localStorage
-    localStorage.setItem('shoppingCart', JSON.stringify(cartArray));
+    // localStorage.setItem('shoppingCart', JSON.stringify(cartArray));
   }
 
   return (
