@@ -19,7 +19,7 @@ const homePageCourseData: CourseData[] = [
   },
   {
     id: 'home-3',
-    icon: "/images/courses/TECH-WIZ.webp",
+    icon: "/images/courses/p1-TECH-WIZ.webp",
     title: "Tech Wiz Program: The Ultimate Gateway to Tech Mastery",
     description: "By Learnnex",
     originalPrice: '4,999.00',
