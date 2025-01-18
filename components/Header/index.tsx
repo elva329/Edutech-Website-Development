@@ -132,6 +132,7 @@ const Header = () => {
     removeFromCart(id);
     setLocalStorageData(localStorageData)
   }
+  const sheetContentClass = getSelectedCourse().length > 0 ? 'z-99999' : 'z-99999 flex items-center justify-center'
 
   return (
     <header
@@ -246,7 +247,7 @@ const Header = () => {
             <SheetTrigger asChild>
               <Button variant="ghost">{shoppingCart()}</Button>
             </SheetTrigger>
-            <SheetContent className='z-99999'>
+            <SheetContent className={sheetContentClass}>
               <div className="grid gap-4 py-4 max-h-[90%] overflow-y-scroll">
                 {getSelectedCourse().length > 0 && getSelectedCourse().map(course => {
                   return <div className="grid grid-cols-2 items-start border-b pb-6" key={course.id}>
@@ -279,9 +280,7 @@ const Header = () => {
                             </g>
                           </svg>
                         </div>
-
                       </div>
-
                     </div>
                   </div>
                 })}
@@ -297,7 +296,10 @@ const Header = () => {
                     <Button type="submit">Checkout</Button>
                   </SheetClose>
                 </SheetFooter>
-              </> : <div>No products in the cart.</div>}
+              </> : <div className='text-gray-400 flex flex-col justify-center items-center'>
+                <svg fill="none" height="160" viewBox="0 0 16 16" width="160" xmlns="http://www.w3.org/2000/svg"><g fill="#e2e8f0"><path d="m2.5 2c-.27614 0-.5.22386-.5.5s.22386.5.5.5h.2457c.22324 0 .41943.14799.48076.36264l1.58556 5.54944c.18398.64395.77256 1.08792 1.44228 1.08792h4.5687c.6133 0 1.1649-.37343 1.3927-.94291l1.4743-3.6857c.2627-.65686-.2211-1.37139-.9285-1.37139h-8.31292l-.2606-.91208c-.18398-.64395-.77256-1.08792-1.44228-1.08792z" /><path d="m6.5 14c.82843 0 1.5-.6716 1.5-1.5s-.67157-1.5-1.5-1.5-1.5.6716-1.5 1.5.67157 1.5 1.5 1.5z" /><path d="m10.5 14c.8284 0 1.5-.6716 1.5-1.5s-.6716-1.5-1.5-1.5c-.82843 0-1.5.6716-1.5 1.5s.67157 1.5 1.5 1.5z" /></g></svg>
+                No products in the cart.
+              </div>}
 
             </SheetContent>
           </Sheet>
