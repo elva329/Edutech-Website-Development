@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -188,12 +189,12 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className='text-[#627693]'>
-                      <a
-                        href="https://learnnex.in/refund_returns/"
+                      <Link
+                        href="refund-returns"
                         className="mb-3 inline-block hover:text-[#3b075f]"
                       >
                         Refund Policy
-                      </a>
+                      </Link>
                     </li>
                     <li className='text-[#627693]'>
                       <a
