@@ -155,7 +155,9 @@ const Cart = () => {
                 </TableRow>
                 <TableRow className='text-center' suppressHydrationWarning>
                   <TableCell colSpan={6}>
-                    <Button className='bg-[#ff006a] hover:opacity-80 hover:bg-[#ff006a]'>Proceed To Checkout</Button>
+                    <Link href='checkout'>
+                      <Button className='bg-[#ff006a] hover:opacity-80 hover:bg-[#ff006a]'>Proceed To Checkout</Button>
+                    </Link>
                   </TableCell>
                 </TableRow>
               </TableFooter>
