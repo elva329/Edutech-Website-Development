@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const BlogItem = ({ blog }: { blog: Blog }) => {
-  const { mainImage, title, metadata } = blog;
+  const { title, metadata, tag } = blog;
 
   return (
     <>
@@ -33,12 +33,11 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
             </Link>
           </h3>
           <p className="line-clamp-3 text-[#627693] text-sm">{metadata}</p>
-          <Link href='/all-course'>
+          {(tag !== 'growth' && tag !== 'benefits') && <Link href='/all-course'>
             <div className='
               bg-[rgb(255,0,106)] hover:bg-white text-white hover:text-[rgb(255,0,106)] border hover:border-[rgb(255,0,106)]  w-fit py-1 px-4 rounded-2xl text-sm
               '>50+ Programs</div>
-          </Link>
-
+          </Link>}
         </div>
       </motion.div>
     </>

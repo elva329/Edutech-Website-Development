@@ -173,20 +173,20 @@ const Footer = () => {
 
                   <ul className='text-sm'>
                     <li className='text-[#627693]'>
-                      <a
-                        href="https://learnnex.in/about-us/"
+                      <Link
+                        href="about-us"
                         className="mb-3 inline-block hover:text-[#3b075f]"
                       >
                         About Our Platform
-                      </a>
+                      </Link>
                     </li>
                     <li className='text-[#627693]'>
-                      <a
-                        href="https://learnnex.in/growth-and-operations/"
+                      <Link
+                        href="growth-and-operations"
                         className="mb-3 inline-block hover:text-[#3b075f]"
                       >
                         Growth & Operations Intern
-                      </a>
+                      </Link>
                     </li>
                     <li className='text-[#627693]'>
                       <Link
@@ -197,20 +197,20 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li className='text-[#627693]'>
-                      <a
-                        href="https://learnnex.in/terms-and-conditions/"
+                      <Link
+                        href="terms-and-conditions"
                         className="mb-3 inline-block hover:text-[#3b075f]"
                       >
                         Terms & Conditions
-                      </a>
+                      </Link>
                     </li>
                     <li className='text-[#627693]'>
-                      <a
-                        href="https://learnnex.in/privacy-policy/"
+                      <Link
+                        href="privacy-policy"
                         className="mb-3 inline-block hover:text-[#3b075f]"
                       >
                         Privacy Policy
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>

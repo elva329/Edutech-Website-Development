@@ -16,7 +16,7 @@ const BlogData: Blog[] = [
       "Gain job market advantage with LearnNex's respected government-certified courses.",
   },
   {
-    _id: 4,
+    _id: 3,
     mainImage: "/images/blog/blog-03.png",
     title: "Complete Placement Assistance",
     metadata:
