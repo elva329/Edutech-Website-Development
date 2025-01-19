@@ -174,7 +174,7 @@ const Footer = () => {
                   <ul className='text-sm'>
                     <li className='text-[#627693]'>
                       <Link
-                        href="about-us"
+                        href="about"
                         className="mb-3 inline-block hover:text-[#3b075f]"
                       >
                         About Our Platform
