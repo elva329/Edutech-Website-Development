@@ -14,3 +14,14 @@ export const totalCourse: CourseData[] = [
   ...proPicksData,
   ...preRegistrationData
 ];
+
+export function formatUSD(price) {
+  const number = parseFloat(price); // Convert string to number
+  if (isNaN(number)) {
+    return 'Invalid price'; // Return an error message if the conversion fails
+  }
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'INR'
+  }).format(number);
+}

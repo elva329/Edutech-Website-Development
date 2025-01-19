@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox"
 import { Textarea } from '../ui/textarea';
 import Link from 'next/link';
+import { useCart } from '../../state/CartContext';
+import { CourseData } from '../../types/feature';
+import { formatUSD, totalCourse } from '../../constants';
 
 const CheckoutForm = () => {
   /**
@@ -13,6 +16,8 @@ const CheckoutForm = () => {
    */
   const [hasMounted, setHasMounted] = React.useState(false);
   const [showNote, setShowNote] = useState(false);
+  const { cart } = useCart();
+
 
   React.useEffect(() => {
     setHasMounted(true);
@@ -24,6 +29,40 @@ const CheckoutForm = () => {
   const handleNoteChange = () => {
     setShowNote(!showNote)
   }
+
+  const getSelectedCourse = () => {
+    const selectedCourseData: CourseData[] = [];
+
+    // Create a map of course ID to course data for fast lookup
+    const courseMap = new Map<string, CourseData>();
+    for (const course of totalCourse) {
+      courseMap.set(course.id, course);
+    }
+
+    for (const data of cart) {
+      if (courseMap.has(data)) {
+        const course = courseMap.get(data)!;
+        selectedCourseData.push({
+          id: course.id,
+          icon: course.icon,
+          title: course.title,
+          description: course.description,
+          originalPrice: course.originalPrice,
+          salePrice: course.salePrice
+        });
+      }
+    }
+
+    return selectedCourseData;
+  };
+
+  const totalSalePrice = getSelectedCourse()
+    .map(course => {
+      const cleanedPrice = course.salePrice.replace(/,/g, '');
+      const numericPrice = parseFloat(cleanedPrice);
+      return isNaN(numericPrice) ? 0 : numericPrice; // Return 0 for invalid numbers
+    })
+    .reduce((sum, salePrice) => sum + salePrice, 0);
 
   return (
     <>
@@ -194,33 +233,25 @@ const CheckoutForm = () => {
               whileInView="visible"
               transition={{ duration: 2, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
+              className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[46%] xl:pt-15"
             >
               <h2 className="mb-12.5 text-3xl font-semibold text-[#3b065f]  xl:text-sectiontitle2">
-                Get In Touch With <span className='bg-gradient-to-r from-purple-600 via-red-500 to-indigo-400 text-transparent bg-clip-text'>LearnNex</span>
+                Order Summary
               </h2>
 
-              <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-medium text-[#3b065f]">
-                  Our Loaction
-                </h3>
-                <p>Mathchowmuhani, opposite to ISKON, 2nd Floor, Agartala, Tripura (West)</p>
-              </div>
-              <div className="5 mb-7">
-                <h3 className="mb-4 text-metatitle3 font-mediumtext-[#3b065f]">
-                  Email Address
-                </h3>
-                <p>
-                  <a href="#">operations@learnnex.in</a>
-                </p>
-              </div>
-              <div>
-                <h4 className="mb-4 text-metatitle3 font-medium text-[#3b065f] dark:text-white">
-                  Phone Number
-                </h4>
-                <p>
-                  <a href="#">+91 9366-154-935</a>
-                </p>
+              <div className="grid gap-4 py-4 max-h-[90%] overflow-y-scroll">
+                {getSelectedCourse().length > 0 && getSelectedCourse().map(course => {
+                  return <div className="grid grid-cols-2 items-start border-b pb-3" key={course.id}>
+                    <Image src={course.icon} width={140} height={86} alt="title" className='aspect-[70/43]' priority={false} />
+                    <div>
+                      <div className='text-sm mb-5'>{course.title}</div>
+                      <div className='flex gap-6 text-sm'>
+                        1 * ₹{course.salePrice}
+                      </div>
+                    </div>
+                  </div>
+                })}
+                <div className='font-bold text-2xl'>Total Price: {formatUSD(totalSalePrice)}</div>
               </div>
             </motion.div>
           </div>

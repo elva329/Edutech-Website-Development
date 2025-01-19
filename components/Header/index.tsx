@@ -24,7 +24,7 @@ import professionalCourseData from '../Features/professionalCourseData';
 import proPicksData from '../Features/proPicksData';
 import { CourseData } from '../../types/feature';
 import homePageCourseData from '../Features/homePageCourseData';
-import { totalCourse } from '../../constants';
+import { formatUSD, totalCourse } from '../../constants';
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -281,7 +281,7 @@ const Header = () => {
 
               </div>
               {getSelectedCourse().length > 0 ? <>
-                <div className='text-lg'>Subtotal: ₹{totalSalePrice}</div>
+                <div className='text-lg'>Subtotal: {formatUSD(totalSalePrice)}</div>
                 <SheetFooter>
                   <SheetClose asChild>
                     <Link href='cart'>
