@@ -206,12 +206,15 @@ const CheckoutForm = () => {
                   <Link href='cart'>
                     <div className='underline underline-offset-1 text-[#ff006a]'>Return to Cart</div>
                   </Link>
-                  <button
-                    aria-label="send message"
-                    className="inline-flex items-center gap-2.5 rounded-full bg-[#ff006a] px-6 py-3 font-medium text-white duration-300 ease-in-out hover:opacity-80"
-                  >
-                    Place Order
-                  </button>
+                  <Link href='/checkout/order-pay'>
+                    <button
+                      aria-label="send message"
+                      className="inline-flex items-center gap-2.5 rounded-full bg-[#ff006a] px-6 py-3 font-medium text-white duration-300 ease-in-out hover:opacity-80"
+                    >
+                      Place Order
+                    </button>
+                  </Link>
+
                 </div>
 
               </form>

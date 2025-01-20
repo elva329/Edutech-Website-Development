@@ -289,7 +289,9 @@ const Header = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Button type="submit">Checkout</Button>
+                    <Link href='checkout'>
+                      <Button type="submit">Checkout</Button>
+                    </Link>
                   </SheetClose>
                 </SheetFooter>
               </> : <div className='text-gray-400 flex flex-col justify-center items-center'>

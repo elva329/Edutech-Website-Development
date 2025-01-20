@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from '../../../state/CartContext';
 import { CourseData } from '../../../types/feature';
-import { totalCourse } from '../../../constants';
+import { formatUSD, totalCourse } from '../../../constants';
 import {
   Table,
   TableBody,
@@ -79,22 +79,20 @@ const Cart = () => {
           whileInView="visible"
           transition={{ duration: 1, delay: 0.1 }}
           viewport={{ once: true }}
-          className="animate_top rounded-lg bg-white px-7.5 pt-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black xl:px-15 xl:pt-15"
+          className="animate_top rounded-lg bg-white px-7.5 pt-7.5 shadow-solid-8  xl:px-15 xl:pt-15"
         >
-          <h2 className="mb-15 text-center text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+          <h2 className="mb-15 text-center text-3xl font-semibold text-black  xl:text-sectiontitle2">
             Selected Course List
           </h2>
           <div className="flex flex-col">
             <Table suppressHydrationWarning className='mb-20'>
               <TableHeader >
                 <TableRow >
-                  <TableHead className="w-[100px]">
-                    Product</TableHead>
+                  <TableHead>Product</TableHead>
                   <TableHead>	Name</TableHead>
                   <TableHead>	Unit Price</TableHead>
                   <TableHead className="text-right">Quantity</TableHead>
                   <TableHead className="text-right" >Subtotal</TableHead>
-                  <TableHead className="text-right" ></TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -151,7 +149,7 @@ const Cart = () => {
                 </TableRow>
                 <TableRow>
                   <TableCell colSpan={5}>Total</TableCell>
-                  <TableCell className="text-right">₹{totalSalePrice}</TableCell>
+                  <TableCell className="text-right">{formatUSD(totalSalePrice)}</TableCell>
                 </TableRow>
                 <TableRow className='text-center' suppressHydrationWarning>
                   <TableCell colSpan={6}>
